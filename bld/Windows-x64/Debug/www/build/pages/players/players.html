@@ -1,0 +1,36 @@
+﻿<ion-navbar *navbar class="hide-border">
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-buttons end>
+        <button (click)="addPlayer()">
+        <ion-icon ios="ios-add-circle-outline" md="md-add-circle"></ion-icon>
+            
+        </button>
+    </ion-buttons> 
+</ion-navbar>
+
+<ion-content class="players">
+    <ion-list>
+        <ion-item-sliding *ngFor="let player of shownPlayers" #slidingItem>
+            <button ion-item (click)="goToSessionDetail(session)">
+                <h3>{{player.name}}</h3>
+                <p>skill: {{player.skill}}
+                </p>
+            </button>
+ 
+            <ion-item-options>
+                <button danger (click)="removePlayer(slidingItem, player)">
+                    Delete
+                </button>
+            </ion-item-options>
+
+        </ion-item-sliding>
+
+    </ion-list>
+
+    <ion-list-header [hidden]="shownPlayers.length > 0">
+        No Players :(
+    </ion-list-header>
+</ion-content>

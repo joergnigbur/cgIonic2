@@ -1,0 +1,61 @@
+table
+{
+    margin-top:10px;
+border: 0px solid gray;
+border-collapse: collapse;
+}
+
+/*table > thead > tr > th
+{
+    text-align:left;
+    border: 1px solid white;
+    background-color:gray;
+    color:white;
+    font-weight: normal;
+    border-bottom-color: gray;
+    border-top-color:gray;
+    border-radius:0px;
+
+}*/
+
+table > thead > tr > th:first-child
+{
+    border-left-color:gray;
+}
+
+table > thead > tr > th:last-child
+{
+    border-right-color:gray;
+
+}
+
+table tr
+{
+    /*border:1px solid black;*/
+}
+
+table td
+{
+    border-width:1px 0;
+
+    border-color:black;
+    border-style:groove;
+    text-transform: lowercase;
+
+}
+
+table td, table th
+{
+    padding:0 5px;
+    
+}
+
+.rowWork
+{
+    background-color: lightgreen;
+}
+
+.rowPause
+{
+    background-color:#fbffde;
+}

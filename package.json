@@ -1,0 +1,70 @@
+{
+  "version": "0.1",
+  "name": "ionic-conference-app",
+  "description": "Ionic Conference App",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.3",
+    "@angular/compiler": "2.0.0-rc.3",
+    "@angular/core": "2.0.0-rc.3",
+    "@angular/http": "2.0.0-rc.3",
+    "@angular/platform-browser": "2.0.0-rc.3",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.3",
+    "@angular/router": "2.0.0-rc.2",
+    
+    
+    "chalk": "^1.1.3",
+    "es6-shim": "0.35.1",
+    "ionic-angular": "2.0.0-beta.11",
+    "ionic-native":"1.3.0",
+    "ionicons": "3.0.0",
+    "minimatch": "3.0.2",
+    "pouchdb": "5.4.4",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "socket.io-client": "1.4.6",
+    "vinyl-fs": "^2.4.3",
+    "zone.js": "0.6.12", 
+    "moment": "2.14.1"
+  },
+  "devDependencies": {
+    "del": "2.2.0",
+    "gulp": "3.9.1",
+    "gulp-tslint": "^5.0.0",
+    "gulp-watch": "4.3.5",
+    "ionic-gulp-browserify-typescript": "^1.1.0",
+    "ionic-gulp-fonts-copy": "^1.0.0",
+    "ionic-gulp-html-copy": "^1.0.0",
+    "ionic-gulp-sass-build": "^1.0.0",
+    "ionic-gulp-scripts-copy": "2.0.0",
+    "ionic-gulp-tslint": "^1.1.0",
+    
+    "run-sequence": "1.1.5",
+    "tslint": "^3.10.1",
+    "tslint-eslint-rules": "^1.3.0",
+    "sugar": "^1.4.1"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    {
+      "locator": "https://github.com/VersoSolutions/CordovaClipboard",
+      "id": "com.verso.cordova.clipboard"
+    },
+    {
+      "locator": "https://github.com/apache/cordova-plugin-splashscreen.git",
+      "id": "cordova-plugin-splashscreen"
+    },
+    "cordova-plugin-sqlite-2"
+  ],
+  "cordovaPlatforms": [
+    "ios",
+    {
+      "platform": "android",
+      "locator": "windows"
+    }
+  ]
+}

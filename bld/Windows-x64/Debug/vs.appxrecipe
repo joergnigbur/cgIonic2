@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>JULIAN-PC</Machine>
+    <WindowsUser>Jkraf</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>io.ionic.conference</PackageIdentityName>
+    <IntermediateOutputPath>c:\projects\ionic2\ionic-conference-app\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>8CA9B991B70DBD8CC1277FA1273C8A63FC825B0BBE0E99378547483E2FA94677</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>io.ionic.conference_0.0.1.0_x64__h35559jr9hy9m</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>io.ionic.conference_h35559jr9hy9m!io.ionic.conference</RegisteredUserModeAppID>
+    <RegisteredPackageID>io.ionic.conference</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Apache Cordova Team</RegisteredPackagePublisher>
+    <RegisteredVersion>0.0.1.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\build\windows\debug\x64\win8.1\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T15:00:11.616</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T14:35:21.068</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T14:35:21.071</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T14:35:21.073</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T14:35:21.074</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <Modified>2016-06-04T14:35:21.076</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T14:35:21.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+      <Modified>2016-06-04T14:35:21.079</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T14:35:21.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T14:35:21.084</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\appicon.png">
+      <PackagePath>www\img\appicon.png</PackagePath>
+      <Modified>2016-06-04T15:00:08.646</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\ica-slidebox-img-1.png">
+      <PackagePath>www\img\ica-slidebox-img-1.png</PackagePath>
+      <Modified>2016-06-04T15:00:08.663</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\ica-slidebox-img-2.png">
+      <PackagePath>www\img\ica-slidebox-img-2.png</PackagePath>
+      <Modified>2016-06-04T15:00:08.679</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\ica-slidebox-img-3.png">
+      <PackagePath>www\img\ica-slidebox-img-3.png</PackagePath>
+      <Modified>2016-06-04T15:00:08.682</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\ica-slidebox-img-4.png">
+      <PackagePath>www\img\ica-slidebox-img-4.png</PackagePath>
+      <Modified>2016-06-04T15:00:08.699</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\app.html">
+      <PackagePath>www\build\app.html</PackagePath>
+      <Modified>2016-06-04T15:00:09.878</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\about\about.html">
+      <PackagePath>www\build\pages\about\about.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.472</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\account\account.html">
+      <PackagePath>www\build\pages\account\account.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.473</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\addplayer\addplayer.html">
+      <PackagePath>www\build\pages\addplayer\addplayer.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.478</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\login\login.html">
+      <PackagePath>www\build\pages\login\login.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.479</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\map\map.html">
+      <PackagePath>www\build\pages\map\map.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.480</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\players\players.html">
+      <PackagePath>www\build\pages\players\players.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.486</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\schedule-filter\schedule-filter.html">
+      <PackagePath>www\build\pages\schedule-filter\schedule-filter.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.495</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\schedule\schedule.html">
+      <PackagePath>www\build\pages\schedule\schedule.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.493</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\session-detail\session-detail.html">
+      <PackagePath>www\build\pages\session-detail\session-detail.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.498</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\signup\signup.html">
+      <PackagePath>www\build\pages\signup\signup.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.503</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\speaker-detail\speaker-detail.html">
+      <PackagePath>www\build\pages\speaker-detail\speaker-detail.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.505</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\speaker-list\speaker-list.html">
+      <PackagePath>www\build\pages\speaker-list\speaker-list.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.510</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\tabs\tabs.html">
+      <PackagePath>www\build\pages\tabs\tabs.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.515</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\pages\tutorial\tutorial.html">
+      <PackagePath>www\build\pages\tutorial\tutorial.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.521</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+      <Modified>2016-06-04T15:00:10.546</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\css\app.ios.css">
+      <PackagePath>www\build\css\app.ios.css</PackagePath>
+      <Modified>2016-06-04T15:00:09.886</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\css\app.md.css">
+      <PackagePath>www\build\css\app.md.css</PackagePath>
+      <Modified>2016-06-04T15:00:09.902</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\css\app.wp.css">
+      <PackagePath>www\build\css\app.wp.css</PackagePath>
+      <Modified>2016-06-04T15:00:09.911</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\ionicons.ttf">
+      <PackagePath>www\build\fonts\ionicons.ttf</PackagePath>
+      <Modified>2016-06-04T15:00:07.114</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\noto-sans-bold.ttf">
+      <PackagePath>www\build\fonts\noto-sans-bold.ttf</PackagePath>
+      <Modified>2016-06-04T15:00:07.130</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\noto-sans-regular.ttf">
+      <PackagePath>www\build\fonts\noto-sans-regular.ttf</PackagePath>
+      <Modified>2016-06-04T15:00:07.135</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\roboto-bold.ttf">
+      <PackagePath>www\build\fonts\roboto-bold.ttf</PackagePath>
+      <Modified>2016-06-04T15:00:07.141</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\roboto-light.ttf">
+      <PackagePath>www\build\fonts\roboto-light.ttf</PackagePath>
+      <Modified>2016-06-04T15:00:07.151</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\roboto-medium.ttf">
+      <PackagePath>www\build\fonts\roboto-medium.ttf</PackagePath>
+      <Modified>2016-06-04T15:00:07.161</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\roboto-regular.ttf">
+      <PackagePath>www\build\fonts\roboto-regular.ttf</PackagePath>
+      <Modified>2016-06-04T15:00:07.171</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\ionicons.woff">
+      <PackagePath>www\build\fonts\ionicons.woff</PackagePath>
+      <Modified>2016-06-04T15:00:07.120</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\roboto-bold.woff">
+      <PackagePath>www\build\fonts\roboto-bold.woff</PackagePath>
+      <Modified>2016-06-04T15:00:07.146</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\roboto-light.woff">
+      <PackagePath>www\build\fonts\roboto-light.woff</PackagePath>
+      <Modified>2016-06-04T15:00:07.156</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\roboto-medium.woff">
+      <PackagePath>www\build\fonts\roboto-medium.woff</PackagePath>
+      <Modified>2016-06-04T15:00:07.165</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\roboto-regular.woff">
+      <PackagePath>www\build\fonts\roboto-regular.woff</PackagePath>
+      <Modified>2016-06-04T15:00:07.177</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\fonts\ionicons.woff2">
+      <PackagePath>www\build\fonts\ionicons.woff2</PackagePath>
+      <Modified>2016-06-04T15:00:07.125</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\js\app.bundle.js">
+      <PackagePath>www\build\js\app.bundle.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.312</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\js\es6-shim.min.js">
+      <PackagePath>www\build\js\es6-shim.min.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.391</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\js\Reflect.js">
+      <PackagePath>www\build\js\Reflect.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.426</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\js\zone.js">
+      <PackagePath>www\build\js\zone.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.470</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.523</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.534</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+      <Modified>2016-06-04T15:00:09.053</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.536</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\plugins\cordova-plugin-clipboard\www\client.js">
+      <PackagePath>www\plugins\cordova-plugin-clipboard\www\client.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.547</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\plugins\cordova-plugin-sqlite-2\dist\sqlite-plugin.js">
+      <PackagePath>www\plugins\cordova-plugin-sqlite-2\dist\sqlite-plugin.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.624</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\plugins\cordova-plugin-statusbar\src\windows\StatusBarProxy.js">
+      <PackagePath>www\plugins\cordova-plugin-statusbar\src\windows\StatusBarProxy.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.628</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\plugins\cordova-plugin-statusbar\www\statusbar.js">
+      <PackagePath>www\plugins\cordova-plugin-statusbar\www\statusbar.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.629</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\plugins\cordova-plugin-x-toast\test\tests.js">
+      <PackagePath>www\plugins\cordova-plugin-x-toast\test\tests.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.630</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\plugins\cordova-plugin-x-toast\www\Toast.js">
+      <PackagePath>www\plugins\cordova-plugin-x-toast\www\Toast.js</PackagePath>
+      <Modified>2016-06-04T15:00:10.632</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\WinJS\js\base.js">
+      <PackagePath>www\WinJS\js\base.js</PackagePath>
+      <Modified>2016-06-04T15:00:09.533</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\build\js\app.bundle.js.map">
+      <PackagePath>www\build\js\app.bundle.js.map</PackagePath>
+      <Modified>2016-06-04T15:00:08.165</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\data\.json">
+      <PackagePath>www\data\.json</PackagePath>
+      <Modified>2016-06-04T15:00:08.624</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\data\data.json">
+      <PackagePath>www\data\data.json</PackagePath>
+      <Modified>2016-06-04T15:00:10.545</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\appicon.svg">
+      <PackagePath>www\img\appicon.svg</PackagePath>
+      <Modified>2016-06-04T15:00:08.661</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\ionic-logo-white.svg">
+      <PackagePath>www\img\ionic-logo-white.svg</PackagePath>
+      <Modified>2016-06-04T15:00:08.710</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\bear.jpg">
+      <PackagePath>www\img\speakers\bear.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.738</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\cheetah.jpg">
+      <PackagePath>www\img\speakers\cheetah.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.761</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\duck.jpg">
+      <PackagePath>www\img\speakers\duck.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.787</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\eagle.jpg">
+      <PackagePath>www\img\speakers\eagle.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.801</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\elephant.jpg">
+      <PackagePath>www\img\speakers\elephant.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.820</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\giraffe.jpg">
+      <PackagePath>www\img\speakers\giraffe.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.842</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\iguana.jpg">
+      <PackagePath>www\img\speakers\iguana.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.858</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\kitten.jpg">
+      <PackagePath>www\img\speakers\kitten.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.873</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\lion.jpg">
+      <PackagePath>www\img\speakers\lion.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.887</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\mouse.jpg">
+      <PackagePath>www\img\speakers\mouse.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.911</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\puppy.jpg">
+      <PackagePath>www\img\speakers\puppy.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.928</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\rabbit.jpg">
+      <PackagePath>www\img\speakers\rabbit.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\www\img\speakers\turtle.jpg">
+      <PackagePath>www\img\speakers\turtle.jpg</PackagePath>
+      <Modified>2016-06-04T15:00:08.978</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+      <Modified>2016-06-04T15:00:07.035</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\projects\ionic2\ionic-conference-app\platforms\windows\build\windows\debug\x64\win8.1\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2016-06-04T15:00:11.267</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.17018</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.17018</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

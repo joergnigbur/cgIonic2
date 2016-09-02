@@ -1,0 +1,27 @@
+<ion-navbar *navbar class="hide-border">
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{pageTitle}}</ion-title>
+    <!--<ion-buttons end>
+        <button (click)="addPlayer()">
+        <ion-icon ios="ios-add-circle-outline" md="md-add-circle"></ion-icon>
+
+        </button>
+    </ion-buttons> -->
+</ion-navbar>
+
+<ion-content>
+    <div style="height:50%">
+        <ion-grid>
+            <ion-row *ngFor="let gameplayer of gameplay.players">
+                <ion-col width-50><div>{{gameplayer.player.name}}</div></ion-col>
+                <ion-col width-50><div>{{gameplayer.currentPoints}}</div></ion-col>
+                
+            </ion-row>
+        </ion-grid>
+
+        
+    </div>
+    <div class="current-points">3011</div>
+</ion-content>

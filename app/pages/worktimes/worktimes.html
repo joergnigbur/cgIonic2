@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>title: {{title}}</ion-title>
+    <ion-buttons end>
+      <button (click)="loadWorktimeLogEntries()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="has-footer">
+  <ion-list>
+    <ion-item-sliding *ngFor="let data of tableData" #slidingItem>
+      <!--<button ion-item (click)="data.showDetails = !data.showDetails">-->
+      <button ion-item (click)="showWorktimesDay(data);">
+        <h2>{{data.date.format("dddd DD.MM.YYYY")}}</h2>
+        <p>Pause: {{data.totals.pause ? data.totals.pause.format("HH:mm") : "0:00"}}</p>
+        <h3 item-right>{{data.totals.work.format("HH:mm")}}</h3>
+        <ion-grid [hidden]="!data.showDetails">
+          <ion-row>
+            <ion-col width-25>status</ion-col>
+            <ion-col width-25>from</ion-col>
+            <ion-col width-25>to</ion-col>
+            <ion-col width-25>duration</ion-col>
+          </ion-row>
+          <ion-row *ngFor="let worktime of data.entries" class="row{{worktime.action}}">
+            <ion-col width-25>{{worktime.action}}</ion-col>
+            <ion-col width-25>{{worktime.startzeit.format("HH:mm")}}</ion-col>
+            <ion-col width-25>{{worktime.endezeit.format("HH:mm")}}</ion-col>
+            <ion-col width-25>{{worktime.duration.format("HH:mm")}}</ion-col>
+          </ion-row>
+
+        </ion-grid>
+
+
+      </button>
+
+      <ion-item-options>
+        <button dark (click)="removePlayer(slidingItem, data)">Edit
+        </button>
+        <button danger (click)="removePlayer(slidingItem, data)">Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list-header [hidden]="tableData.length > 0">keine Zeitbuchungen.......haha
+  </ion-list-header>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

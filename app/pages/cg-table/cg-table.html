@@ -1,0 +1,49 @@
+
+<ion-header>
+<ion-navbar no-border-bottom>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons end>
+        <button (click)="loadWorktimeLogEntries()">
+            <ion-icon name="information-circle"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item-sliding *ngFor="let data of tableData" #slidingItem>
+            <button ion-item (click)="showTimeLogEntry(session)">
+                <!--<ion-label>{{data.startzeit}}</ion-label>-->
+
+<h3>{{data.action}}</h3>
+
+{{data.startzeitString}}
+
+                <!--<ion-datetime displayFormat="DD.MM.YYYY HH:mm:ss" pickerFormat="HH:mm:ss" [(ngModel)]="data.startzeit"></ion-datetime>
+                &nbsp;-&nbsp;
+                <ion-datetime displayFormat="DD.MM.YYYY HH:mm:ss" pickerFormat="HH:mm:ss" [(ngModel)]="data.endezeit"></ion-datetime>
+                -->
+
+
+
+            </button>
+            <ion-item-options>
+                <button dark (click)="removePlayer(slidingItem, data)">
+                    Edit
+                </button>
+                <button danger (click)="removePlayer(slidingItem, data)">
+                    Delete
+                </button>
+            </ion-item-options>
+
+        </ion-item-sliding>
+
+    </ion-list>
+
+    <ion-list-header [hidden]="tableData.length > 0">
+        keine Zeitbuchungen.......haha
+    </ion-list-header>
+</ion-content>

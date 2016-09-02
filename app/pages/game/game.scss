@@ -1,0 +1,26 @@
+﻿.current-points{
+        bottom: 31px;
+    width: 5em;
+    border-radius: 5px;
+    border: 3px solid #555;
+    font-size: x-large;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    height: 2em;
+    vertical-align: middle;
+    line-height: 1.8em;
+    background-color: white;
+}
+
+
+ion-col div {
+    /*background-color: #F9FAFB;*/
+    padding: 5px;
+    /*border: 1px solid #ddd;*/
+    /*border-radius: 2px;*/
+    text-align: left;
+    font-size:larger;
+    font-family: "Roboto";
+  }
