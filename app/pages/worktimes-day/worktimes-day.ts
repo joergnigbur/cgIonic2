@@ -36,10 +36,6 @@ export class WorktimesDayPage {
       if(wEntry.action == "save") {
         exEntry.startzeit = moment(wEntry.item.startzeit).utc();
         exEntry.endezeit = moment(wEntry.item.endezeit).utc();
-      }else{
-
-        delete exEntry;
-
       }
       self.nav.setRoot(WorktimesDayPage, self.navParams.data);
     })
