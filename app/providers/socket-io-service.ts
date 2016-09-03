@@ -5,6 +5,7 @@ import { Article } from '../models/article';
 import { Destination } from '../models/destination';
 import * as io from 'socket.io-client';
 import * as moment from 'moment';
+
 //declare var io;
 
 export class TimeEntry {
@@ -23,14 +24,36 @@ export class SocketIOService {
 
     constructor() {
         this.initSocket();
+
+
     }
 
     public initSocket() {
-        let self = this;
-        this.socket = io.connect('http://mobile.couplink.net:2445');
+      let self = this;
+      var list = {};
+      var syc = window["syc"];
+     //   this.socket = io.connect('http://mobile.couplink.net:2445');
 
-        this.socket.on("connect", () => {
-            self.connected = true;
+      syc.loaded(function () {
+
+        list = syc.list('test');
+        syc.watch(list, function(changes, socket){
+
+          console.log(JSON.stringify(changes));
+
+        }, {remote: true, local: true});
+
+      });
+
+      this.socket = io.connect('http://localhost:3000');
+
+      this.socket.on("connect", () => {
+          self.connected = true;
+
+
+
+          syc.connect(self.socket);
+
         });
 
         this.socket.on("disconnect", () => {

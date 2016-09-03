@@ -9,7 +9,8 @@ var gulp = require('gulp'),
 var nodeModulesSrc = [
   'node_modules/socket.io-client/socket.io.js',
   'node_modules/moment/locale/de.js',
-  'node_modules/moment/min/moment-with-locales.js'
+  'node_modules/moment/min/moment-with-locales.js',
+  'node_modules/syc/client/syc.js'
 ];
 
 var destJs = "www/build/js";
