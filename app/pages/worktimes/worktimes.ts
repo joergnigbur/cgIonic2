@@ -1,10 +1,11 @@
 import {Component, ViewChild} from '@angular/core';
-import {App, Page, Modal, Alert, NavController, ItemSliding, List, Loading} from 'ionic-angular';
+import {App, Page, Modal, Alert, NavController, ItemSliding, ModalController, LoadingController} from 'ionic-angular';
 import {SocketIOService} from '../../providers/socket-io-service';
 //import {Moment} from 'moment';
 import * as moment from "moment";
 import 'moment/locale/de';
 import {WorktimesDayPage} from '../worktimes-day/worktimes-day';
+import {WorktimeDetailPage} from '../worktime-detail/worktime-detail';
 
 
 //declare var io;
@@ -32,7 +33,9 @@ export class WorktimesPage {
     constructor(
         private app: App,
         private nav: NavController,
-        private socketIOService: SocketIOService
+        private socketIOService: SocketIOService,
+        private loadingCtrl: LoadingController,
+        private modalCtrl: ModalController
 
     ) {
 
@@ -57,15 +60,21 @@ export class WorktimesPage {
         this.nav.push(WorktimesDayPage, data);
     }
 
+    showAddLogItem(){
+
+       this.modalCtrl.create(WorktimeDetailPage).present();
+
+    }
+
     loadWorktimeLogEntries() {
         moment.locale("de");
         console.log("jappa");
         let self = this;
-        let loading = Loading.create({ content: "lade Zeitbuchungen..." });
-        //this.nav.present(loading);
+        let loading = this.loadingCtrl.create({ content: "lade Zeitbuchungen..." });
+        //loading.present()
         self.title = 'lade...';
 
-        this.socketIOService.getWorktimesLogEntries({manummer: 'JKR', days: 30}, function (entries) {
+        this.socketIOService.getWorktimesLogEntries({manummer: 'JKR', days: 31}, function (entries) {
 
             var worktimeDays = [];
 

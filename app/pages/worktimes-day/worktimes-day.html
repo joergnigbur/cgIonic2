@@ -14,7 +14,7 @@
 <ion-content class="has-footer">
   <ion-list>
     <ion-item-sliding *ngFor="let worktime of navParams.data.entries" #slidingItem>
-      <button ion-item (click)="data.showDetails = !data.showDetails">
+      <button ion-item (click)="showDetail(worktime)">
         <h2>{{worktime.action == "work" ? "Arbeit" : "Pause"}}</h2>
         <h3>{{worktime.startzeit.format("HH:mm")}} - {{worktime.endezeit.format("HH:mm")}}</h3>
         <p item-right>{{worktime.duration.format("HH:mm")}}</p>

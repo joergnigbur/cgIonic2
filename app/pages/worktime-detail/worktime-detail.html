@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Zeitbuchung bearbeiten {{worktimeEntry.Manummer}}</ion-title>
+    <ion-buttons end>
+      <button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="speaker-detail">
+<ion-list>
+
+  <ion-item *ngIf="!worktimeEntry.WorktimesLogId">
+    <ion-label>Manummer</ion-label>
+    <ion-input [(ngModel)]="worktimeEntry.Manummer"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Startzeit</ion-label>
+      <ion-datetime [(ngModel)]="worktimeEntry.startzeit" displayFormat="DD.MM.YYYY H:mm"></ion-datetime>
+    </ion-item>
+  <ion-item>
+    <ion-label>Endezeit</ion-label>
+    <ion-datetime [(ngModel)]="worktimeEntry.endezeit" displayFormat="DD.MM.YYYY H:mm"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Art</ion-label>
+    <ion-select [(ngModel)]="worktimeEntry.action">
+      <ion-option value="work">Arbeit</ion-option>
+      <ion-option value="pause">Pause</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <button full positive (click)="save()" full>
+      Speichern
+    </button>
+    <button *ngIf="worktimeEntry.WorktimesLogId" full (click)="delete()">
+      Löschen
+    </button>
+  </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,4 +1,4 @@
-import {NavController, Page, ActionSheet} from 'ionic-angular';
+import {NavController, Page, ActionSheetController} from 'ionic-angular';
 import {ConferenceData} from '../../providers/conference-data';
 import {SpeakerDetailPage} from '../speaker-detail/speaker-detail';
 import {SessionDetailPage} from '../session-detail/session-detail';
@@ -8,10 +8,10 @@ import {SessionDetailPage} from '../session-detail/session-detail';
   templateUrl: 'build/pages/speaker-list/speaker-list.html'
 })
 export class SpeakerListPage {
-  actionSheet: ActionSheet;
+
   speakers = [];
 
-  constructor(private nav: NavController, confData: ConferenceData) {
+  constructor(private nav: NavController, confData: ConferenceData, private   actionSheet: ActionSheetController) {
     confData.getSpeakers().then(speakers => {
       this.speakers = speakers;
     });
@@ -30,7 +30,7 @@ export class SpeakerListPage {
   }
 
   openSpeakerShare(speaker) {
-    let actionSheet = ActionSheet.create({
+    let actionSheet = this.actionSheet.create({
       title: 'Share ' + speaker.name,
       buttons: [
         {
@@ -57,7 +57,6 @@ export class SpeakerListPage {
         }
       ]
     });
-
-    this.nav.present(actionSheet);
+    actionSheet.present();
   }
 }

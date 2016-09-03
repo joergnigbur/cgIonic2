@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Article } from '../models/article';
 import { Destination } from '../models/destination';
 import * as io from 'socket.io-client';
-
+import * as moment from 'moment';
 //declare var io;
 
 export class TimeEntry {
@@ -27,7 +27,7 @@ export class SocketIOService {
 
     public initSocket() {
         let self = this;
-        this.socket = io.connect('http:/xxx:81');
+        this.socket = io.connect('http://mobile.couplink.net:2445');
 
         this.socket.on("connect", () => {
             self.connected = true;
@@ -50,7 +50,7 @@ export class SocketIOService {
 
     public getWorktimesLogEntries(filter, callback): void {
 
-        let query: string = "SELECT Startzeit as startzeit, Endezeit AS endezeit, DATEDIFF(ss, Startzeit, Endezeit) * 1000 AS duration, LOWER(Action) as action";
+        let query: string = "SELECT Startzeit as startzeit, Endezeit AS endezeit, DATEDIFF(ss, Startzeit, Endezeit) * 1000 AS duration, LOWER(Action) as action, WorktimesLogId ";
         query += " FROM cg_WorkTimesLog ";
         query += " WHERE Startzeit > GETDATE() - " + filter.days ;
         query += " AND MANummer = '" + filter.manummer + "' ";
@@ -67,18 +67,71 @@ export class SocketIOService {
             });
             callback(result);
         });
-
-        /*this.socket.emit("getWorktimesLog", filter, function (items) {
-            let result = [];
-            items.map(function(item) {
-                item.startzeit = item.startzeit.substring(0, 19);
-                if(item.endezeit != null)
-                item.endezeit = item.endezeit.substring(0, 19);
-                result.push(item);
-            });
-            callback(result);
-        });*/
     }
+
+  public deleteWorktimeLogItem(wlItem: any): Promise<void> {
+    let query = "DELETE FROM cg_WorktimesLog WHERE WorktimesLogId =  '"+wlItem.WorktimesLogId+"'";
+
+
+    return new Promise<void>( resolve => {
+
+        this.socket.emit("getData", query, function(){
+          resolve();
+        })
+      }
+    )
+
+  }
+
+
+  public saveWorktimeLogItem(wlItem: any): Promise<void> {
+    let query = "";
+    if(wlItem.WorktimesLogId)
+      query = "UPDATE cg_WorktimesLog SET Startzeit = '"+wlItem.startzeit+"', Endezeit='"+wlItem.endezeit+"', Action = '"+wlItem.action+"' WHERE WorktimesLogId = '"+wlItem.WorktimesLogId+"'";
+    else
+      query = "INSERT INTO cg_WorktimesLog (Startzeit, Endezeit, Manummer, SerNr, Action) VALUES ('"+moment(wlItem.startzeit).format("YYYY-MM-DDTHH:mm:ss")+"', '"+moment(wlItem.endezeit).format("YYYY-MM-DDTHH:mm:ss")+"', '"+wlItem.Manummer+"', '', '"+wlItem.action+"')";
+
+
+    return new Promise<void>( resolve => {
+
+        this.socket.emit("getData", query, function(){
+          resolve();
+        })
+      }
+    )
+
+  }
+
+
+  public getWorktimeLogItem(id: string): Promise<any> {
+
+    let query: string = "SELECT Manummer, Startzeit as startzeit, Endezeit AS endezeit, DATEDIFF(ss, Startzeit, Endezeit) * 1000 AS duration, LOWER(Action) as action, WorktimesLogId ";
+    query += " FROM cg_WorkTimesLog ";
+    query += " WHERE WorktimesLogId = '"+id+"'";
+    return new Promise<any>(resolve => {
+
+
+      this.socket.emit("getData", query, function (items) {
+        let result = items[0];
+        resolve(result);
+
+
+      });
+
+    })
+
+    /*this.socket.emit("getWorktimesLog", filter, function (items) {
+     let result = [];
+     items.map(function(item) {
+     item.startzeit = item.startzeit.substring(0, 19);
+     if(item.endezeit != null)
+     item.endezeit = item.endezeit.substring(0, 19);
+     result.push(item);
+     });
+     callback(result);
+     });*/
+  }
+
 
     public getDestinations(): Destination[] {
         return this.destinations;

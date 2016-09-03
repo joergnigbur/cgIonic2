@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavParams, ViewController, Toast, ToastOptions} from 'ionic-angular';
+import {NavParams, ViewController} from 'ionic-angular';
 import {PlayerData, Player} from '../../providers/player-data';
 
 
@@ -8,10 +8,10 @@ import {PlayerData, Player} from '../../providers/player-data';
 })
 export class AddPlayerPage {
     newPlayer: Player;
-    
-  
+
+
   constructor(
-    
+
       private playerData: PlayerData,
     private navParams: NavParams,
     private viewCtrl: ViewController
@@ -22,10 +22,10 @@ export class AddPlayerPage {
       this.playerData.getPlayers().then(players=>{
 
           Toast.create(this.toastOpts).emit();
-              
+
       })
 */
-           
+
     }
 
   addPlayer() {
@@ -39,5 +39,5 @@ export class AddPlayerPage {
   cancel() {
           this.viewCtrl.dismiss("canceled");
   }
-  
+
 }

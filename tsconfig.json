@@ -5,7 +5,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "sourceRoot": "/source/",
+    "sourceRoot": "/",
         "inlineSourceMap": false,
     "inlineSources": false,
     "removeComments": false

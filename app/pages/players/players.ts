@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {App, Page, Modal, Alert, NavController, ItemSliding, List} from 'ionic-angular';
+import {App, Page, ModalController, AlertController, NavController, ItemSliding, List} from 'ionic-angular';
 import {PlayerData, Car} from '../../providers/player-data';
 import {AddPlayerPage} from '../addplayer/addplayer';
 import * as sock from 'socket.io-client';
@@ -29,7 +29,9 @@ export class PlayersPage {
         private app: App,
         private nav: NavController,
         private playerData: PlayerData,
-        private gameplay: Gameplay
+        private gameplay: Gameplay,
+        private modelCtrl: ModalController,
+        private alertCtrl: AlertController
 
     ) {
     }
@@ -60,17 +62,16 @@ export class PlayersPage {
     }
 
     addPlayer() {
-        let modal = Modal.create(AddPlayerPage);
-        this.nav.present(modal);
-
-        modal.onDismiss((data: any[]) => {
+        let modal = this.modelCtrl.create(AddPlayerPage);
+      modal.present();
+        modal.onDidDismiss((data: any[]) => {
                 this.updatePlayerlist();
         });
     }
 
     removePlayer(slidingItem: ItemSliding, player) {
         let self = this;
-        let alert = Alert.create({
+        let alert = this.alertCtrl.create({
             title: "drop player!",
             message: 'Would you like to remove player '+ player.name + '?',
             buttons: [
@@ -98,6 +99,6 @@ export class PlayersPage {
           ]
         });
         // now present the alert on top of all other content
-        this.nav.present(alert);
+        alert.present();
       }
     }

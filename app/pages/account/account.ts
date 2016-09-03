@@ -1,4 +1,4 @@
-import {NavController, Alert} from 'ionic-angular';
+import {NavController, AlertController, ViewController} from 'ionic-angular';
 import {Component} from '@angular/core';
 import {UserData} from '../../providers/user-data';
 import {LoginPage} from '../login/login';
@@ -9,7 +9,7 @@ import {LoginPage} from '../login/login';
 export class AccountPage {
   username: string;
 
-  constructor(private nav: NavController, private userData: UserData) {
+  constructor(private nav: NavController, private userData: UserData, private alertCtrl: AlertController, private viewCtrl: ViewController) {
 
   }
 
@@ -25,7 +25,7 @@ export class AccountPage {
   // clicking OK will update the username and display it
   // clicking Cancel will close the alert and do nothing
   changeUsername() {
-    let alert = Alert.create({
+    let alert = this.alertCtrl.create({
       title: 'Change Username',
       buttons: [
         'Cancel'
@@ -44,7 +44,7 @@ export class AccountPage {
       }
     });
 
-    this.nav.present(alert);
+    alert.present();
   }
 
   getUsername() {

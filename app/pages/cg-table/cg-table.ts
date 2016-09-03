@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {App, Page, Modal, Alert, NavController, ItemSliding, List, Loading} from 'ionic-angular';
+import {App, Page, Modal, Alert, NavController, ItemSliding, List, LoadingController} from 'ionic-angular';
 import {SocketIOService} from '../../providers/socket-io-service';
 //import {Moment} from 'moment';
 import * as moment from "moment";
@@ -22,7 +22,7 @@ export class CgTablePage {
 
     constructor(
         private app: App,
-        private nav: NavController,
+        private loading: LoadingController,
         private socketIOService: SocketIOService
 
     ) {
@@ -41,19 +41,19 @@ export class CgTablePage {
     onPageDidEnter() {
         this.app.setTitle('Zeitbuchungen');
         this.loadWorktimeLogEntries();
-        
+
 
 
     }
 
     loadWorktimeLogEntries() {
         let self = this;
-        let loading = Loading.create({ content: "lade Zeitbuchungen..." });
+        let loading = this.loading.create({ content: "lade Zeitbuchungen..." });
         //this.nav.present(loading);
         self.title = 'lade...';
 
         this.socketIOService.getWorktimesLogEntries({manummer: 'JKR', days: 30}, function (entries) {
-            
+
 entries.map(function(entry){
    entry["startzeitString"] = moment(entry.startzeit).format();
 });
