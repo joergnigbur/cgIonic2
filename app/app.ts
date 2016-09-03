@@ -18,7 +18,6 @@ import {WorktimesPage} from './pages/worktimes/worktimes';
 import {WorktimesDayPage} from './pages/worktimes-day/worktimes-day';
 
 
-
 interface PageObj {
   title: string;
   component: any;
@@ -34,6 +33,8 @@ class ConferenceApp {
   // the root nav is a child of the root app component
   // @ViewChild(Nav) gets a reference to the app's root nav
   @ViewChild(Nav) nav: Nav;
+
+  serverState: any = {};
 
   // List of pages that can be navigated to from the left menu
   // the left menu only works after login
@@ -63,13 +64,16 @@ class ConferenceApp {
     private events: Events,
     private userData: UserData,
     private menu: MenuController,
+    private socketService: SocketIOService,
     platform: Platform,
     confData: ConferenceData
   ) {
+    var self = this;
     // Call any initial plugins when ready
     platform.ready().then(() => {
       StatusBar.styleDefault();
       Splashscreen.hide();
+
     });
 
     //connectSocketIO();

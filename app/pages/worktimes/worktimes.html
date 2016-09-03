@@ -12,7 +12,16 @@
   </ion-navbar>
 </ion-header>
 <ion-content class="has-footer">
+
   <ion-list>
+    <ion-item>
+    {{serverState.message}}
+  </ion-item>
+
+      <ion-item *ngFor="let clientId of clients">
+        {{clientId}}
+      </ion-item>
+
     <ion-item-sliding *ngFor="let data of tableData" #slidingItem>
       <!--<button ion-item (click)="data.showDetails = !data.showDetails">-->
       <button ion-item (click)="showWorktimesDay(data);">

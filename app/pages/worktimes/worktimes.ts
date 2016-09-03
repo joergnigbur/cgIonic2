@@ -18,10 +18,10 @@ export class WorktimesPage {
     // @ViewChild('scheduleList') gets a reference to the list
     // with the variable #scheduleList, `read: List` tells it to return
     // the List and not a reference to the element
-
+    clients = [];
     tableData = [];
     title = "Zeitbuchungen";
-
+    serverState = {};
      public event = {
     month: '1990-02-19',
     timeStarts: '07:43',
@@ -38,6 +38,18 @@ export class WorktimesPage {
         private modalCtrl: ModalController
 
     ) {
+      var self = this;
+      self.socketIOService.watchSync("server-state", function(resp){
+
+        Object.assign(self.serverState,  resp.variable);
+
+      })
+      self.socketIOService.watchSync("clients", function(resp){
+
+        Object.assign(self.clients,  resp.variable);
+
+      })
+
 
     }
 
